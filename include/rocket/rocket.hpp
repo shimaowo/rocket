@@ -16,74 +16,19 @@
  *   publish, and distribute this file as you see fit.                             *
  ***********************************************************************************/
 
-#ifndef ROCKET_HPP_INCLUDED
-#define ROCKET_HPP_INCLUDED
-
-/***********************************************************************************
- * CONFIGURATION                                                                   *
- * ------------------------------------------------------------------------------- *
- * Define this if you want to disable exceptions.                                  *
- * ------------------------------------------------------------------------------- */
-
-#ifndef ROCKET_NO_EXCEPTIONS
-#    define ROCKET_NO_EXCEPTIONS
-#endif
-
-/***********************************************************************************
- * ------------------------------------------------------------------------------- *
- * Define this if you want to disable the `stable_list` collection in rocket.      *
- * ------------------------------------------------------------------------------- */
-
-#ifndef ROCKET_NO_STABLE_LIST
-#    define ROCKET_NO_STABLE_LIST
-#endif
-
-/***********************************************************************************
- * ------------------------------------------------------------------------------- *
- * Define this if you want to disable `set_timeout` and `set_interval` features.   *
- * ------------------------------------------------------------------------------- */
-
-#ifndef ROCKET_NO_TIMERS
-#    define ROCKET_NO_TIMERS
-#endif
-
-/***********************************************************************************
- * ------------------------------------------------------------------------------- *
- * Define this if you want to disable the connection blocking feature.             *
- * ------------------------------------------------------------------------------- */
-
-#ifndef ROCKET_NO_BLOCKING_CONNECTIONS
-#    define ROCKET_NO_BLOCKING_CONNECTIONS
-#endif
-
-/***********************************************************************************
- * ------------------------------------------------------------------------------- *
- * Define this if you want to disable the queued connection feature.               *
- * ------------------------------------------------------------------------------- */
-
-#ifndef ROCKET_NO_QUEUED_CONNECTIONS
-#    define ROCKET_NO_QUEUED_CONNECTIONS
-#endif
-
-/***********************************************************************************
- * ------------------------------------------------------------------------------- *
- * Define this if you want to disable the smart pointer extensions feature.        *
- * ------------------------------------------------------------------------------- */
-
-#ifndef ROCKET_NO_SMARTPOINTER_EXTENSIONS
-#    define ROCKET_NO_SMARTPOINTER_EXTENSIONS
-#endif
 
 /***********************************************************************************
  * ------------------------------------------------------------------------------- *
  * Redefine this if your compiler doesn't support the `thread_local`-keyword.      *
  * For Visual Studio < 2015 you can define it to `__declspec(thread)` for example. *
  * ------------------------------------------------------------------------------- */
-
 #ifndef ROCKET_THREAD_LOCAL
 #    define ROCKET_THREAD_LOCAL thread_local
 #endif
 
+
+#ifndef ROCKET_HPP_INCLUDED
+#define ROCKET_HPP_INCLUDED
 
 #include <atomic>
 #include <cassert>
