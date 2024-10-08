@@ -1489,7 +1489,7 @@ namespace rocket
 
             ROCKET_NODISCARD bool is_queued() const noexcept
             {
-                return thread_id != std::thread::id{} && thread_id != std::this_thread::get_id();
+                return !(thread_id == std::thread::id{}) && !(thread_id == std::this_thread::get_id());
             }
 #endif//~ ROCKET_NO_QUEUED_CONNECTIONS
 
