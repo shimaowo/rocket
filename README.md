@@ -4,6 +4,21 @@ Rocket is a public-domain, single-header implementation of a signal/slots librar
 
 The library was developed because existing solutions were too inflexible, too slow, or came as a part of a larger dependency (for example boost::signals and boost::signals2).
 
+## Fork notes
+
+The original project is not setup well for inclusion with any package managers or build configuration systems, including cmake, despite having a CMakeLists.txt.
+
+This fork:
+- Moves all #defines requiring user editing to cmake options
+- Renames the existing option to avoid global collisions
+- Creates an interface library target and alias, with proper include directories
+- Restructures the project to be friendly to external projects
+- Allows for standard scoped includes, ie `#include <rocket/rocket.hpp>`
+
+I also included a PR fix from the original repo to address concerns in c++20.
+
+I did **not** create an install interface for cmake, however.
+
 ## Design goals
 
 1. Efficiency. The library takes special care to not use cache unfriendly code (such as calling virtual methods) unless absolutely necessary.
